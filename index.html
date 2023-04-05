@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+<meta name="description" content="To Migrate, Please Unstake your previously Staked LP from v1 & Stake into v2 Gauges">
+<meta name="keywords" content="Ftm.guru, Guru Network, Finance, Decentralized Finance, defi, Airdrop, EQUAL, veNFT, Solidly, Equalizer, Fantom Opera, FTM">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title>Equalizer v2: Liquidity Migration</title>
+	<link rel="shortcut icon" href="https://equalizer.exchange/assets/logo/EQUAL.png"/>
+	<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">-->
+	<link rel="stylesheet" href="index.css"/>
+	<style>
+	</style>
+</head>
+	<body>
+	<header>
+		<a class="logo" href="/"><img src="https://equalizer.exchange/images/logo.png"></a>
+		<input id="nav" type="checkbox">
+		<label for="nav" id="burger-menu"><img src="img/borger.jpg" alt=""></label>
+		<nav>
+		<ul>
+			<li><a href="https://equalizer.exchange/swap">Swap</a></li>
+			<li><a href="https://equalizer.exchange/liquidity">Liquidity</a></li>
+			<li><a href="https://equalizer.exchange/vest">Vest</a></li>
+			<li><a href="https://equalizer.exchange/vote">Vote</a></li>
+			<li><a href="https://equalizer.exchange/bribe/create">Bribe</a></li>
+			<li><a href="https://equalizer.exchange/rewards">Rewards</a></li>
+			<li> <button class="connect-wallet" id="cw" onclick="cw()">Connect Wallet</button></li>
+		</ul>
+		</nav>
+
+	</header>
+
+
+	<div class="partnership">
+		<h1><span>Liquidity Migration</span></h1>
+		<br>
+		<h2>Unstake LP from <span id="bonus-percentage"> v1</span> & Stake into <span id="bonus-percentage"> v2</span> Gauges</h2>
+		<br><br>
+	</div>
+
+
+	<div class="mechanism">
+		<div class="input-amount">
+			<div style="overflow:auto">
+				<table>
+					<thead>
+						<tr>
+							<td>Liquidity Pools</td>
+							<td>Staked LP Balances</td>
+							<td>Migrate to v2</td>
+						</tr>
+						<tr>
+							<td>- - -</td>
+							<td>- - - - - - - </td>
+							<td>- - - - - </td>
+						</tr>
+					</thead>
+					<tbody id="mainstage">
+						<tr>
+							<td colspan="3">Waiting for your wallet details..</td>
+						</tr>
+					<!--
+						<tr>
+							<td>
+								<img src="https://equalizer.exchange/assets/logo/EQUAL.png"/>
+								<img src="https://equalizer.exchange/assets/logo/WFTM.png"/>
+							</td>
+							<td>
+								0.1234567890123456789
+							</td>
+							<td>
+								<button class="submit equal-gradient" onclick="extend()"><span id="claim-offer">Migrate to v2</span></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="https://equalizer.exchange/assets/logo/WFTM.png"/>
+								<img src="https://equalizer.exchange/assets/logo/DAI.png"/>
+							</td>
+							<td>
+								123456789012345.6789
+							</td>
+							<td>
+								<button class="submit equal-gradient" onclick="extend()"><span id="claim-offer">Migrate to v2</span></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="https://equalizer.exchange/assets/logo/WFTM.png"/>
+								<img src="https://equalizer.exchange/assets/logo/ETH.png"/>
+							</td>
+							<td>
+								7859.6789
+							</td>
+							<td>
+								<button class="submit equal-gradient" onclick="extend()"><span id="claim-offer">Migrate to v2</span></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="https://equalizer.exchange/assets/logo/TAROT.png"/>
+								<img src="https://equalizer.exchange/assets/logo/WFTM.png"/>
+							</td>
+							<td>
+								12.6789
+							</td>
+							<td>
+								<button class="submit equal-gradient" onclick="extend()"><span id="claim-offer">Migrate to v2</span></button>
+							</td>
+						</tr>
+					-->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<br><br>
+	<br><br>
+	<div align="center" class="lowerbar socialIcon">
+	 <a href="https://twitter.com/Equalizer0x" target="_blank"><img src="https://equalizer.exchange/socials/socialcion1.svg" alt="Icon"></a>
+	 <a href="https://discord.gg/6ubHeztmYV" target="_blank"><img src="https://equalizer.exchange/socials/social-cion2.svg" alt="Icon"></a>
+	 <a href="https://equalizer0x.gitbook.io/equalizer-exchange-docs/" target="_blank"><img src="https://equalizer.exchange/socials/social-cion3.svg" alt="Icon"></a>
+	 <a href="https://www.youtube.com/channel/UCERDeAyvqf8kEDAcorKJdTA" target="_blank"><img src="https://equalizer.exchange/socials/youtube.png" alt="Icon"></a>
+	</div>
+	<br><br>
+
+	<div id="note" class="overlay">
+		<div class="popup">
+			<a class="close" href="#">&times;</a>
+			<div class="content" id="content1">
+				<h3>Equalizer: v2 LP Migration</h3>
+				This dApp allows anyone to migrate their LP tokens Staked inside v1 of Equalizer to the new Gauges on Equalizer v2.
+			</div>
+		</div>
+	</div>
+
+
+
+<!-- IGNORE BELOW BLOCK : DEV LOGS -->
+	<div style="display:none">
+		<span id="cw_m"></span>
+		<div id="connect">
+			Please connect your web3 wallet.
+			<br><br>
+			<button onclick="cw()" id="btn-connect">Connect</button>
+		</div>
+		<div id="switch">
+			<b id="btn-switch" onclick="cw()">
+				<img src="img/wallet.svg" width="24px" style="position:relative;top:4px">
+				<span id="cw"></span>
+			</b>
+			<br>Balance: <b style="font-family:bold" id="usb-mtv">?</b> <img class="imgmtv" src="https://ftm.guru/icons/usdc.svg" width="20px" style="position:relative;top:4px">USDC<br>
+			<span style="font-size:0.9em">Wallet at <img class="imgmtv" src="https://ftm.guru/icons/ftm.svg" width="20px" style="position:relative;top:4px">Fantom Opera. <a href="index.html" style="color:aqua;font-family:bold">Change?</a></span>
+		</div>
+	</div>
+<!-- IGNORE ABOVE BLOCK : DEV LOGS -->
+
+	<div id="particle-container">
+			<div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+		</div>
+		<script src="https://ftm.guru/ethers-5.2.umd.min.js" type="application/javascript" defer="true"></script>
+		<script src="https://ftm.guru/chart.min.js" type="application/javascript"></script>
+		<script src="https://ftm.guru/chartjs-adapter-date-fns.bundle.min.js" type="application/javascript"></script>
+		<script src="index.js?v=2"></script>
+		<script>
+		CHAINID = 250;
+		RPC_URL = "https://rpc.ftm.tools";
+		EXPLORE = "https://ftmscan.com/address/";
+		CHAIN_NAME = "Fantom Opera Mainnet";
+		VENFT = "0x8313f3551C4D3984FfbaDFb42f780D0c8763Ce94";
+		VENAMM = "0x6b4a8b8e5e83a0e1631e5c01faf44fb371bd2956";
+		WFTM = "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83";
+		VME = "0x1633670d2ae6ebe5ff7d9d9c24a8c59b617e4884";
+		EQUAL = "0x3fd3a0c85b70754efc07ac9ac0cbbdce664865a6";
+		</script>
+	</body>
+</html>
